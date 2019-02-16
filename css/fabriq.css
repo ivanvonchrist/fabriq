@@ -13,7 +13,7 @@ http://www.opensource.org/licenses/mit-license.php
 -- table of contents --
 - core
 - container
-- navigation
+- menu + nav
 - hero
 - content
 - items
@@ -59,9 +59,19 @@ body {
     margin: 0 0 0 1.5em;
     color: #E36588; }
 
-/* navigation */
+/* menu + nav */
 
+#menu {
+    display: none;
+    width: 100%;
+    margin: 1.25rem 2rem;
+    font-size: 2.4rem;
+    text-align: center;
+    background-color: whitesmoke; }
+#open, #close {
+    display: none; }
 #nav {
+    opacity: 1;
     padding: 3em 0;
     background-color: whitesmoke; }
 #nav ul {
@@ -96,7 +106,7 @@ body {
 /* typography */
 
 h1, h2, h3 {
-    margin: 2.5rem 0rem 2.5rem 2rem;
+    margin: 2.5rem 2rem;
     font-weight: 300;
     line-height: 1.6; }
 p {
@@ -263,22 +273,6 @@ input[type="button"]:focus {
     flex-direction: row;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-.dis-inl {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex; }
-.dir-col {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: vertical;
-    flex-direction: vertical; }
-.nowrap {
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap; }
-.jus-str {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
 .jus-ctr {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -298,6 +292,15 @@ hr {
     width: 80%;
     border-width: 0;
     border-top: 1px solid #E1E1E1; }
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+      to { opacity: 1; }}  
+@keyframes fade {
+    from { opacity: 0; }
+      to { opacity: 1; }}
+.fade {
+    -webkit-animation: fade 1s;
+    animation: fade 1s }
 
 /* responsive css */
 
@@ -313,6 +316,10 @@ hr {
         padding: 1.5em 0; }
     #header h1 {
         margin: 0; }
+    #menu, #open {
+        display: block; }
+    #nav, #close {
+        display: none; }
     #nav ul {
          margin: 0; }
     #nav ul li {
@@ -322,3 +329,8 @@ hr {
         padding: 2em 0 0 0; }
     hr {
         width: 100%; }}
+@media (min-width: 768px) {
+    #nav {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important; }}

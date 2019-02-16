@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Meta -->
+    <!-- meta -->
     <meta charset="utf-8">
     <title>fabriq</title>
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <!-- Mobile Meta -->
+    <!-- mobile meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- Font -->
+    <!-- font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     
-    <!-- CSS -->
+    <!-- css -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fabriq.css">
     
-    <!-- Favicon -->
+    <!-- scripts -->
+    <script type="text/javascript" src="scripts/menu.js"></script>
+    
+    <!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-    <div id="container" class="parent just-ctr ali-ctr">
+    <div id="container" class="parent ali-ctr">
         <div id="header" class="parent g0 s0 f40">
-            <h1>fabriq <i class="fas fa-heart"></i></h1>
+            <h1>fabriq</h1>
+        </div>
+        <div id="menu">
+            <a id="open" onclick="openMenu()"><i class="fas fa-bars"></i></a></h1>
+            <a id="close" onclick="closeMenu()"><i class="fas fa-times"></i></a></h1>
         </div>
         <div id="nav" class="parent jus-end ali-ctr g0 s0 f60">
-            <ul class="parent">
+            <ul id="nav-list" class="parent">
                 <li><a href="#">home</a></li>
                 <li><a href="#">documentation</a></li>
                 <li><a href="#">github</a></li>
