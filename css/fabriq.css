@@ -196,6 +196,9 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     margin: 1em 2em;
     padding: 1em 2em;
     font-size: 0.8em;
