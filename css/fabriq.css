@@ -181,6 +181,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
+    border-color: #E36588;
     outline: 0; }
 input[type="checkbox"],
 input[type="radio"] {
